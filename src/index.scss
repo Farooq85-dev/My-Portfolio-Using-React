@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat" !important;
+}
+
+//Mixins
+@mixin navbarGradientStyle() {
+  background: rgb(61, 67, 113);
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: linear-gradient(
+    270deg,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d4371",endColorstr="#282a40",GradientType=1);
+}
+
+@mixin buttonStyle() {
+  background: rgb(95, 100, 142);
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(95, 100, 142, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(95, 100, 142, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: linear-gradient(
+    270deg,
+    rgba(95, 100, 142, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f648e",endColorstr="#282a40",GradientType=1);
+}
+
+//Main Css
+.navbar {
+  @include navbarGradientStyle();
+}
+
+.navbarButton {
+  @include buttonStyle();
+}

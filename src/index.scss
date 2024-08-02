@@ -57,3 +57,35 @@
 .navbarButton {
   @include buttonStyle();
 }
+
+.heroBg {
+  background: rgb(61, 67, 113);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(61, 67, 113, 1) 0%,
+    rgba(40, 42, 64, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d4371",endColorstr="#282a40",GradientType=1);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #295582, #77bbff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 700px) {
+  .heroBg {
+    padding: 30px !important;
+  }
+}

@@ -7,6 +7,7 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 import Logo from "../../assets/Images/wb-header-logo.png";
+import ButtonComp from "../Button/Button";
 
 export default function NavbarComp() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -74,18 +75,12 @@ export default function NavbarComp() {
   );
 
   return (
-    <Navbar className="mx-auto max-w-full w-full px-8 py-4 rounded-sm navbar">
+    <Navbar className="mx-auto max-w-full w-full px-8 py-4 rounded-sm border-none navbar">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <img src={Logo} width="180" className="py-1.5" />
         <div className="hidden lg:block">{navList}</div>
         <div className="flex items-center gap-x-1">
-          <Button
-            variant="gradient"
-            size="sm"
-            className="hidden lg:inline-block navbarButton"
-          >
-            <span>Hire Me</span>
-          </Button>
+          <ButtonComp title="Hire Me" classes="hidden lg:block" />
         </div>
         <IconButton
           variant="text"
@@ -129,14 +124,7 @@ export default function NavbarComp() {
         <div className="container mx-auto flex flex-col justify-center items-center">
           {navList}
           <div className="flex justify-center items-center gap-x-1">
-            <Button
-              fullWidth
-              variant="gradient"
-              size="sm"
-              className="navbarButton"
-            >
-              <span>Hire Me</span>
-            </Button>
+            <ButtonComp title="Hire Me" />
           </div>
         </div>
       </Collapse>

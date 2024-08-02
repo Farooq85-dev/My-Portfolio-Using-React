@@ -1,3 +1,4 @@
+import HeroComp from "../Components/Hero/Hero";
 import NavbarComp from "../Components/Navbar/Navbar";
 
 function HomePage() {
@@ -5,6 +6,9 @@ function HomePage() {
     <div>
       <>
         <NavbarComp />
+      </>
+      <>
+        <HeroComp />
       </>
     </div>
   );

@@ -49,16 +49,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f648e",endColorstr="#282a40",GradientType=1);
 }
 
-//Main Css
-.navbar {
-  @include navbarGradientStyle();
-}
-
-.navbarButton {
-  @include buttonStyle();
-}
-
-.heroBg {
+@mixin allSectionsBgStyle() {
   background: rgb(61, 67, 113);
   background: -moz-radial-gradient(
     circle,
@@ -78,14 +69,48 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d4371",endColorstr="#282a40",GradientType=1);
 }
 
+//Main Css
+.navbar {
+  @include navbarGradientStyle();
+}
+
+.navbarButton {
+  @include buttonStyle();
+}
+
+.heroBg {
+  @include allSectionsBgStyle();
+}
+
 .gradient-text {
   background: linear-gradient(90deg, #295582, #77bbff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.servicesBg {
+  @include allSectionsBgStyle();
+}
+
+.servicesCard1:hover,
+.servicesCard2:hover,
+.servicesCard3:hover {
+  @include navbarGradientStyle();
+}
+
+//Media Queries
 @media only screen and (max-width: 700px) {
-  .heroBg {
+  .heroBg,
+  .servicesBg {
     padding: 30px !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .servicesCard1,
+  .servicesCard2 {
+    gap: 10px;
+    justify-content: center !important;
+    flex-direction: column !important;
   }
 }
